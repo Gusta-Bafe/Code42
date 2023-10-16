@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Montserrat:wght@500&family=Poppins&family=Roboto+Mono&display=swap');
+
+
+.text h1{
+    padding: 20px 0 20px 0;
+    text-align: center;  
+}
+.row{
+    color: rgb(255, 255, 255);
+    font-family: 'IBM Plex Mono', monospace;   
+}
+.row h1{
+    text-align: center; 
+    padding-bottom: 40px;
+} 
+.titulo{
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px 50px;
+    flex-wrap: wrap;
+   
+}
+
+.cont .carde{
+    position: relative;
+    width: 325px;
+    height: 260px;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,15);
+    background: rgba(13, 0, 47, 0.203);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 0 15px 25px rgba(123, 1, 229, 0.284);
+    
+}
+
+.cont .carde:hover{
+    height: 400px;
+}
+
+.cont .carde .caixaImg{
+    position: absolute;
+    width: 250px;
+    top :20px;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.cont .carde .caixaImg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.cont .carde .conteudo{
+    position: absolute;
+    color: rgb(255, 251, 251);
+    top: 170px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    padding: 0 35px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.cont .carde:hover .conteudo{
+    top:85px;
+    height: 300px;
+    
+}
+.cont .carde:hover .caixaImg{
+    top: -60px;
+    scale: .75;
+    box-shadow: 0 15px 45px rgb(62, 62, 62);
+}
+
+.cont .carde .conteudo h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: rgb(255, 255, 255);
+    
+}
+.cont .carde .conteudo p{
+    color: rgb(247, 247, 247);
+}
+
+.cont .carde .conteudo a{
+    display: inline-block;
+    margin-top: 5px;
+    padding: 10px 20px;
+    background: rgb(50, 20, 79);
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.cont .carde .conteudo a:hover{
+    background:  rgb(84, 0, 163);
+}
+
+
+
+.imagem-redonda {
+    border-radius: 50%; 
+    width: 300px; 
+    height: 300px;
+    object-fit: cover;
+
+    
+}
+
+
+.mestre {
+    display: flex; 
+    align-items: center; 
+    padding-left: 150px;
+    padding-bottom: 30px;
+}
+
+
+.texto-ao-lado {
+    margin-left: 20px; 
+}
+
+
+.conte{
+    display: flex;
+    justify-content: center;
+}
+
+
+    .container {    
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(66, 5, 189, 0.927);
+        padding: 20px;
+        text-align: center;
+        max-width: 600px;
+        width: 100%;
+        border:none
+    }
+
+    h2 {
+        margin-top: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #resultado {
+        margin-top: 20px;
+    }
+
+
+

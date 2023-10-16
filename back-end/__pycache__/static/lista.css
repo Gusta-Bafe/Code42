@@ -1,0 +1,29 @@
+.table{
+    color: aliceblue;
+    border: none;
+    
+}
+
+button {
+    background-color: #6900da; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 4px 7px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Sem sublinhado no texto */
+    display: inline-block; /* Exibir como um bloco inline */
+     /* Tamanho da fonte */
+     /* Margem externa */
+    transition-duration: 0.4s; /* Duração da transição */
+    cursor: pointer; /* Cursor do mouse ao passar por cima */
+    border-radius: 8px; /* Borda arredondada */
+}
+
+/* Estilo quando o mouse passa por cima do botão */
+button:hover {
+    background-color: white;
+    color: #5e4caf;
+    
+}
+
+

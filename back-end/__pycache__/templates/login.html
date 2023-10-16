@@ -1,0 +1,31 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+    
+<div class="contair">
+    <i style="--color:#00ffff"></i>
+    <i style="--color:#00ffff"></i>
+    <i style="--color:#00ffff"></i>
+    <form method="POST" action="{{url_for('autenticar')}}" class="login">
+        <input type="hidden" name="proxima" value="{{ proxima or url_for('index') }}">
+        {{form.csrf_token()}}
+        <h2>Login</h2>
+
+        <label class="inputBox">
+            {{form.nickname(class="input")}}
+        </label>
+
+        <label class="inputBox">
+            {{form.senha(class="input")}}
+        </label>
+
+        <label class="inputBox">
+            {{form.login(class="input")}}
+        </label>
+
+        <label class="link">
+            <a href="#"> Criar conta</a>
+        </label>
+    </form>
+</div>
+{% endblock %}

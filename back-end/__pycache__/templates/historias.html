@@ -1,0 +1,43 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='historias.css') }}">
+<div class="container mt-5">
+    <h1>Criar História</h1>
+    <form action="{{ url_for('nova_historia') }}" method="POST">
+        {{ form.csrf_token }}
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            {{ form.titulo(class="form-control", id="titulo") }}
+        </div>
+        <div class="mb-3">
+            <label for="genero" class="form-label">Gênero</label>
+            {{ form.genero(class="form-select", id="genero") }}
+        </div>
+        <div class="mb-3">
+            <label for="conteudo" class="form-label">Conteúdo (3500 caracteres)</label>
+            {{ form.conteudo(class="form-control", id="conteudo", maxlength="3500") }}
+            <p id="contador">0/3500 caracteres</p>
+        </div>
+        
+        <script>
+            // Adicionar um ouvinte de evento ao campo de entrada
+            const conteudo = document.getElementById('conteudo');
+            const contador = document.getElementById('contador');
+        
+            conteudo.addEventListener('input', function () {
+                const comprimentoTexto = conteudo.value.length;
+                contador.textContent = `${comprimentoTexto}/3500 caracteres`;
+
+                 // Desativar o campo quando atingir 1000 caracteres
+                if (comprimentoTexto >= 3500) {
+                    conteudo.disabled = true;
+                } else {
+                    conteudo.disabled = false;
+                }
+            });
+        </script>
+        <button type="submit" class="btn btn-primary bah" >Criar história</button>
+    </form>
+</div>
+
+{% endblock %}

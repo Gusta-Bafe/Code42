@@ -1,0 +1,36 @@
+.textos{
+    padding: 90px 0 0 30px;
+    color: white;
+}
+
+.container{
+    left: 30px;
+}
+
+#background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Coloca o vídeo atrás de tudo */
+}
+
+#background img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#background::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150%; /* Ajuste a largura conforme necessário para controlar a largura da sombra lateral */
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1; /* Coloca a sombra à frente do vídeo */
+}
+
+

@@ -1,0 +1,87 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cadastro.css') }}">
+<div class="all">
+    <div class=" caixa" >
+        <h1>Bem-vindo à Code42Voyage!</h1>
+        <h5>Explore mundos de aventura, crie personagens épicos e mergulhe em histórias fantásticas.</h5>
+        <p> O RPG de mesa, ou Role-Playing Game, é uma forma cativante de entretenimento que combina narrativa, imaginação e interação social. <br> Neste jogo, você assume o papel de um personagem fictício em um mundo imaginário, orientado por um Mestre do Jogo (ou Mestre) que cria o cenário, define desafios e guia a história. <br>
+            Cada jogador desenvolve uma ficha de personagem detalhando sua identidade, habilidades e metas, e a ação é <br> resolvida através de rolagens de dados. A narrativa é colaborativa, com os jogadores descrevendo as ações de seus personagens e o Mestre dando vida ao mundo ao redor.br <br><br>
+            
+            Em resumo, o RPG de mesa oferece uma experiência única de contar histórias, onde você e seus amigos criam narrativas envolventes e emocionantes em um mundo imaginário, estimulando a imaginação, aprendizado e diversão ao longo da jornada. Bem-vindo ao emocionante mundo das aventuras de RPG!</p>
+        </div>
+    <div class="contair">
+            <form method="POST" action="{{url_for('cadastro')}}" class="login">
+                {{form.csrf_token()}}
+
+                <label class="inputBox">
+                    {{form.nome.label(class='form-label')}}
+                    {{form.nome(class='input')}}
+                    {% if form.nome.errors %}
+                        <ul class="errors">
+                            {% for error in form.nome.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </label>
+
+                <div class="inputBox">
+                    {{form.nickname.label(class='form-label')}}
+                    {{form.nickname(class='input')}}
+                    {% if form.nickname.errors %}
+                        <ul class="errors">
+                            {% for error in form.nickname.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+
+                <div class="inputBox">
+                    {{form.email.label(class='form-label')}}
+                    {{form.email(class='input')}}
+                    {% if form.email.errors %}
+                        <ul class="errors">
+                            {% for error in form.email.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+
+                <div class="inputBox">
+                    {{form.senha.label(class='form-label')}}
+                    {{form.senha(class='input')}}
+                    {% if form.senha.errors %}
+                        <ul class="errors">
+                            {% for error in form.senha.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+
+                <div class="inputBox">
+                    {{form.confirmacao.label(class='form-label')}}
+                    {{form.confirmacao(class='input')}}
+                    {% if form.confirmacao.errors %}
+                        <ul class="errors">
+                            {% for error in form.confirmacao.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+
+                <div class="inputBox">
+                    {{form.cadastrar(class='input')}}
+                </div>
+            </form>
+    </div>
+    
+</div>
+
+    
+{% endblock %}
+

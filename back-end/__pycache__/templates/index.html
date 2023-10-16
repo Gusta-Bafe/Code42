@@ -1,0 +1,169 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='inicio.css') }}">
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron">
+            
+            <br><br>
+            <h1 class="titulo">Sistemas de RPG mais famosos</h1>
+            <div class="cont">
+                <div class="carde">
+                    <div class="caixaImg">
+                        <img src="/static/videos/RPG.gif" >
+                    </div>
+                    <div class="conteudo" data-image="RPG.gif">
+                        <h3>Dungeons & Dragons(D&D)</h3>
+                        <p>O sistema de RPG mais icônico,uma fantasia onde os jogadores exploram mundos, rolam dados para ações e aprimoram seus personagens.</p>
+                        <a href="{{ url_for('rpg', image_name='RPG.gif')}}">SABER MAIS</a>
+                    </div>
+                </div>
+                <div class="carde">
+                    <div class="caixaImg">
+                        <img src="/static/videos/RPG3.gif" >
+                    </div>
+                    <div class="conteudo" data-image="RPG3.gif">
+                        <h3>Pathfinder</h3>
+                        <p>Uma variação do D&D 3.5, conhecida por suas regras expansivas e opções de personalização aprofundadas.</p>
+                        <a href="{{ url_for('rpg', image_name='RPG3.gif')}}">SABER MAIS</a>
+                    </div>
+                </div>
+                <div class="carde">
+                    <div class="caixaImg">
+                        <img src="/static/videos/cutulu.gif" >
+                    </div>
+                    <div class="conteudo" data-image="Cutulu.gif">
+                        <h3>Call of Cthulhu</h3>
+                        <p>Um RPG de investigação e horror baseado nos escritos de H.P. Lovecraft, onde os jogadores enfrentam o sobrenatural em cenários sombrios.</p>
+                        <a href="{{ url_for('rpg', image_name='Cutulu.gif')}}">SABER MAIS</a>
+                    </div>
+                </div>
+                <div class="carde">
+                    <div class="caixaImg">
+                        <img src="/static/videos/ciber.gif" >
+                    </div>
+                    <div class="conteudo" data-image="ciber.gif">
+                        <h3>Shadowrun</h3>
+                        <p> Combinando elementos de cyberpunk e fantasia, neste RPG os jogadores assumem o papel de mercenários corporativos em um mundo complexo.</p>
+                        <a href="{{ url_for('rpg', image_name='ciber.gif')}}">SABER MAIS</a>
+                    </div>
+                </div>
+                <div class="carde">
+                    <div class="caixaImg">
+                        <img src="/static/videos/RPG1.gif">
+                    </div>
+                    <div class="conteudo" data-image="RPG4.gif">
+                        <h3>World of Darkness</h3>
+                        <p>Ambientado em cenários modernos ou gótico-punk, este RPG explora o horror sobrenatural com vampiros, lobisomens e outras criaturas.</p>
+                        <a href="{{ url_for('rpg', image_name='RPG4.gif')}}">SABER MAIS</a>
+                    </div>
+                </div>
+                <div class="carde">
+                    <div class="caixaImg">
+                        <img src="/static/videos/RPG2.gif" >
+                    </div>
+                    <div class="conteudo" data-image="RPG2.gif">
+                        <h3>GURPS</h3>
+                        <p>Um sistema genérico que abrange qualquer gênero ou cenário, oferecendo alta flexibilidade e adaptação.</p>
+                        <a href="{{ url_for('rpg', image_name='RPG2.gif')}}">SABER MAIS</a>
+                    </div>
+                </div>
+            </div>
+
+            <br><br><br><br><br>
+        </div>
+    </div>
+   
+    
+    
+    <div class="main">
+
+        <h1 id="titulo">Vai reunir a galera? <br></h1>
+
+    </div>
+    <div class="container">
+        <div class="bin">
+
+        <h2>Quantidade de pessoas:</h2>
+        <input id="adultos" type="number" name="adultos">
+        <h2>Duração da sessão</h2>
+        <input id="duracao" type="number" name="duracao">
+
+        <button onclick="calcular()">Calcular</button>
+
+        <div id="resultado"></div>
+    
+        </div>
+    </div>
+
+   
+    <h1>Como Jogar</h1>
+    
+    
+    <div class="mestre">
+      
+        <div class="imagem-mestre">
+            <img src="/static/videos/mestre.jpg" class="imagem-redonda">
+        </div>
+        
+        <div class="texto-ao-lado col-md-7">
+            <h4>MESTRE</h4>
+            <p>
+                No emocionante universo do Role-Playing Game (RPG), o Mestre de Mesa (também conhecido como Dungeon Master, Narrador ou Game Master, dependendo do sistema) desempenha um papel crucial e multifacetado. Este é o indivíduo responsável por criar, narrar e dar vida ao mundo fictício onde a aventura acontece, enquanto guia os jogadores em suas jornadas épicas.
+                <br>
+                O Mestre de Mesa é o arquiteto do cenário, o contador de histórias supremo e o árbitro das regras do jogo. Sua missão é proporcionar uma experiência envolvente e desafiadora para os jogadores, ao mesmo tempo em que mantém a coesão da narrativa e a consistência do mundo fictício.</p>
+        </div>
+    </div>
+    <div class="mestre">
+        <div class="imagem-mestre">
+            <img src="/static/videos/jogador.jpg" class="imagem-redonda">
+        </div>
+        <div class="texto-ao-lado col-md-7">
+            <h4>O PAPEL DO JOGADOR</h4>
+            <p>
+                Nos jogos de Role-Playing Game (RPG), os jogadores desempenham um papel fundamental na construção da história. Eles são os heróis, exploradores e personagens principais da aventura. O papel do jogador é dar vida ao seu personagem, tomar decisões, enfrentar desafios e contribuir para o desenvolvimento da narrativa. Cada jogador traz sua criatividade e imaginação para o jogo, criando uma experiência única a cada sessão.
+                <br>
+                O jogador também colabora com o Mestre de Mesa (Dungeon Master) e outros jogadores para criar uma história coesa e envolvente. Sua interpretação do personagem e suas escolhas moldam o destino da aventura, tornando cada jogo de RPG uma jornada épica e imprevisível.
+            </p>
+        </div>
+    </div>
+    <div class="mestre">
+        <div class="imagem-mestre">
+            <img src="/static/videos/aventura.jpg" class="imagem-redonda">
+        </div>
+        <div class="texto-ao-lado col-md-7">
+            <h4>CRIANDO UMA AVENTURA DE RPG</h4>
+            <p>
+                Criar uma aventura de RPG é uma arte que combina narrativa, criatividade e planejamento. O Mestre de Mesa assume o papel de autor e diretor, construindo um mundo fictício, desenvolvendo personagens não jogáveis (NPCs) e preparando desafios para os jogadores.
+                <br>
+                Uma aventura bem-sucedida envolve a definição de objetivos, a criação de locais interessantes, a construção de enredos envolventes e a adaptação às escolhas dos jogadores. A improvisação é uma habilidade importante, já que os jogadores muitas vezes surpreendem com suas ações.
+                <br>
+                Além disso, a preparação do Mestre inclui o conhecimento das regras do sistema, o equilíbrio de desafios e a criação de recompensas. Uma aventura cativante oferece oportunidades para exploração, combate, interação social e resolução de quebra-cabeças, garantindo uma experiência rica e diversificada para os jogadores.
+            </p>
+        </div>
+    </div>
+    <br><br>
+    <div class="mestre">
+        <div class="imagem-mestre">
+            <img src="/static/videos/narrativa.jpg" class="imagem-redonda">
+        </div>
+        <div class="texto-ao-lado col-md-7">
+            <h4>A IMPORTÂNCIA DA NARRATIVA</h4>
+            <p>
+                A narrativa desempenha um papel central nos jogos de RPG. É a cola que une personagens, cenários e eventos em uma experiência coesa e envolvente. Uma narrativa forte dá significado às ações dos jogadores, cria emoção e imersão na história.
+                <br>
+                O Mestre de Mesa é o contador de histórias supremo, guiando os jogadores através de tramas intrigantes e reviravoltas emocionantes. A narrativa também permite que os jogadores explorem temas, dilemas éticos e desafios morais, tornando o RPG não apenas uma aventura, mas uma experiência reflexiva.
+                <br>
+                Os jogadores, por sua vez, contribuem para a narrativa por meio das escolhas de seus personagens e das ações que tomam. Suas decisões afetam o curso da história, criando uma colaboração dinâmica entre Mestre e jogadores. Assim, a narrativa é o coração pulsante do RPG, dando vida ao mundo imaginário e tornando-o memorável.
+            </p>
+        </div>
+    </div>
+    <br><br>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+{% endblock %}

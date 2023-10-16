@@ -1,0 +1,29 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<h1>Histórias</h1>
+    <ul>
+        {% for historia in historias %}
+            <li>
+                <h2>{{ historia.titulo }}</h2>
+                <p>{{ historia.conteudo }}</p>
+                <p>Criado por: {{ historia.usuario.nickname }}</p>
+                <!-- Adicione mais campos conforme necessário -->
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Jogos</h1>
+    <ul>
+        {% for jogo in jogos %}
+            <li>
+                <h2>{{ jogo.nome}}</h2>
+                <p>{{ jogo.categoria }}</p>
+                <p>Criado por: {{ jogo.usuario.nickname }}</p>
+                <!-- Adicione mais campos conforme necessário -->
+            </li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}

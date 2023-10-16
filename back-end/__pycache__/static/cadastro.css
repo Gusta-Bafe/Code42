@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Century Gothc', sans-serif;
+}
+.caixa{
+    flex: 1; 
+    width: 200px; 
+    height: 100%; 
+    display: flex; /* Usa flexbox para alinhar o conteúdo */
+    flex-direction: column; /* Empilha os itens verticalmente */
+    justify-content: center; /* Centraliza verticalmente os itens */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    text-align: center;
+    padding: 0 50px 0 160px; 
+   
+}
+.all {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.contair{
+    position: relative;
+    width: 500px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2b2b2b;
+    border-radius: 20px;
+    
+}
+.contair:hover{
+    filter: drop-shadow(0 0 2px rgb(252, 252, 252));
+}
+
+
+.contair .login{
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contair .login h2{
+    font-size: 4rem;
+}
+.contair .login .inputBox{
+    width: 100%;
+}
+.contair .login .inputBox .input{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+.contair .login .inputBox .input::placeholder{
+    color: rgba(255, 255, 255, .75);
+}
+
+.contair .login .inputBox .input[type="submit"]{
+    background: linear-gradient(45deg, #0176ea, #0300c0);
+    border: none;
+    cursor: pointer;
+}
+
+.contair .login .link{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contair .login .link a{
+    color: #fff;
+    text-decoration: none;
+}

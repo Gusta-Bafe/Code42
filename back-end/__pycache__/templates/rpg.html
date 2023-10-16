@@ -1,0 +1,50 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='rpg.css') }}">
+<div class="container">
+    <div id="background">
+        <img src="{{ url_for('static', filename='videos/' + image_name) }}" alt="">
+    </div>
+    <div class="textos">
+        {% if image_name == 'Cutulu.gif' %}
+        <div class="  col-md-4">
+            <h1>Call of Cthulhu</h1>
+            <p>Call of Cthulhu é uma experiência única no mundo do RPG. Baseado nos escritos do autor de terror H.P. Lovecraft, este sistema mergulha os jogadores em um mundo de horror cósmico, onde a insanidade e o desconhecido são os maiores inimigos. A peculiaridade aqui é que os personagens muitas vezes enfrentam ameaças que estão além da compreensão humana, e a sanidade deles está constantemente em risco.</p>
+        </div>
+
+        {% elif image_name == 'RPG.gif' %}
+        <div class="  col-md-4">
+            <h1>Dungeons & Dragons (D&D)</h1>
+            <p>Dungeons & Dragons (D&D) é o sistema de RPG mais icônico, uma fantasia onde os jogadores exploram mundos, rolam dados para ações e aprimoram seus personagens. Foi criado por Gary Gygax e Dave Arneson na década de 1970 e influenciou muitos aspectos da cultura geek e pop.</p>
+        </div>
+
+        {% elif image_name == 'generico2.gif' %}
+        <div class="  col-md-4">
+            <h1>Pathfinder</h1>
+            <p>Pathfinder é uma derivação direta do D&D 3.5, projetado para oferecer mais opções e regras detalhadas para os jogadores. Uma vantagem notável é o alto nível de personalização de personagens, permitindo que você crie heróis verdadeiramente únicos. Curiosamente, a Pathfinder Society é uma comunidade mundial de jogadores de Pathfinder que se reúnem para aventuras organizadas em eventos e convençõe.</p>
+        </div>
+
+        {% elif image_name == 'ciber.gif' %}
+        <div class="  col-md-4">
+            <h1>Shadowrun</h1>
+            <p>Shadowrun é um RPG que mistura elementos de cyberpunk e magia, criando um cenário distópico onde megacorporações controlam o mundo e os jogadores são mercenários que fazem trabalhos sujos para sobreviver. Curiosamente, a história do jogo inclui um evento chamado "Despertar", quando a magia misteriosamente retorna ao mundo, desencadeando uma série de mudanças drásticas.</p>
+        </div>
+
+        {% elif image_name == 'DARK.gif' %}
+        <div class="  col-md-4">
+            <h1>World of Darkness</h1>
+            <p>World of Darkness é conhecido por explorar o horror sobrenatural em cenários urbanos modernos. Os jogadores interpretam criaturas sobrenaturais como vampiros, lobisomens e outros seres das trevas. Uma curiosidade é que este sistema possui duas linhas principais, a "Máscara" e a "Sombra", cada uma focada em diferentes tipos de criaturas e narrativas.</p>
+        </div>
+
+        {% else %}
+        <div class="  col-md-4">
+            <h1>GURPS</h1>
+            <p>GURPS é um sistema genérico que pode se adaptar a praticamente qualquer gênero ou cenário. Ele se destaca pela flexibilidade e pela necessidade de construir muitas das regras e cenários do zero. Curiosamente, GURPS já foi usado em adaptações de jogos de videogame, filmes e até mesmo em simulações científicas.
+                <br><br>
+            Esses sistemas oferecem experiências de jogo diversas, desde a exploração de mundos de fantasia até a imersão em horrores cósmicos e futuros distópicos. A escolha do melhor sistema de RPG depende do tipo de narrativa e do ambiente que você e seu grupo desejam explorar, além da preferência pessoal por regras mais detalhadas ou mais simplificadas.</p>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

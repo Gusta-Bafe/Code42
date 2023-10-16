@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Montserrat:wght@500&family=Poppins&display=swap');
+
+body{
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center center;
+    
+}
+
+#conteudo {
+    color: rgb(255, 255, 255);
+    background-image: url('/static/img/pergaminho.gif');
+    background-repeat: repeat-y; /* Repetir verticalmente */
+    background-size: cover;
+    padding: 20px; /* Espaçamento interno para manter o texto legível */
+    border: none; /* Remover borda padrão da caixa de texto */
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+#conteudo:focus {
+    border-color: none; 
+    box-shadow: none; 
+    outline: none; 
+    height: 750px;
+   background: black;
+}
+
+.bah{
+    background: transparent;
+    box-shadow: -10px 12px 15px rgb(2, 0, 20);
+    border: none;
+}
+
+.bah focus{
+    background: rgb(255, 0, 0);
+}

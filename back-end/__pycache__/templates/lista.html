@@ -1,0 +1,64 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='lista.css') }}">
+
+<div class="container col-md-8">
+    <div class="tabela">
+        <h1>Lista de jogos</h1>
+                <table class="table table-responsive ">
+                    <thead class="thead-default">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Categoria</th>
+                            <th>Plataforma</th>w
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for jogo in jogos %}
+                        <tr>
+                            <td>{{jogo.nome}}</td>
+                            <td>{{jogo.categoria}}</td>
+                            <td>{{jogo.console}}</td>
+                            <th><button><a href="{{url_for('editar', id=jogo.id)}}"style="text-decoration: none; color: inherit;"><ion-icon name="create-outline"></ion-icon></a></button>
+                                <button><a href="{{url_for('deletar', id=jogo.id)}}"style="text-decoration: none; color: inherit;"><ion-icon name="trash-outline"></ion-icon></a></button>
+                                {% if jogo.publico == False %}
+                                <button><a href="{{ url_for('tornar_publico', jogo_id=jogo.id) }}"style="text-decoration: none; color: inherit;"><ion-icon name="pricetag-outline"></ion-icon></a></button>
+                                {% else %}
+                                <button><a href="{{ url_for('tornar_privado', jogo_id=jogo.id) }}"style="text-decoration: none; color: inherit;"><ion-icon name="pricetags-outline"></ion-icon></a></button>
+                                {% endif %}
+                            </th>
+                        </tr>
+                        {%endfor%}
+                    
+                    </tbody>
+                </table>
+            
+                <h1>Lista de Histórias</h1>
+                <table class="table table-responsive ">
+                    <thead class="thead-default">
+                        <tr>
+                            <th>Título</th>
+                            <th>Gênero</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for historia in historias %}
+                        <tr>
+                            <td>{{ historia.titulo }}</td>
+                            <td>{{ historia.genero }}</td>
+                            <th><button><a href="{{url_for('editar_historia', id=historia.id)}}"style="text-decoration: none; color: inherit;"><ion-icon name="create-outline"></ion-icon></a></button>
+                                <button><a href="{{url_for('deletar_historia', id=historia.id)}}"style="text-decoration: none; color: inherit;"><ion-icon name="trash-outline"></ion-icon></a></button>
+                                {% if historia.publico == False %}
+                                <button><a href="{{ url_for('tornar_publico_historia', historia_id=historia.id) }}"style="text-decoration: none; color: inherit;"><ion-icon name="pricetag-outline"></ion-icon></a></button>
+                                {% else %}
+                                <button><a href="{{ url_for('tornar_privado_historia', historia_id=historia.id) }}"style="text-decoration: none; color: inherit;"><ion-icon name="pricetags-outline"></ion-icon></a></button>
+                            {% endif %}
+                            </th>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+    </div>
+</div>
+{% endblock %}
